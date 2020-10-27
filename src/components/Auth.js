@@ -2,6 +2,8 @@ import React from 'react';
 import { auth , firestore } from '../firebase/firebase';
 import firebase from 'firebase/app';
 import {useState, useEffect} from 'react';
+import { FcGoogle } from 'react-icons/fc';
+import Button from 'react-bootstrap/Button'
 
 function Auth() {
 
@@ -81,7 +83,7 @@ function Auth() {
         );
     } else {
         return (
-            <button className="btn btn-danger" onClick={(e) => {onAuthChange()}}>{loggedIn === "true" ? "Sign Out" : "Sign In With Google"}</button>
+            <Button variant="light" onClick={(e) => {onAuthChange()}}><FcGoogle /> {loggedIn === "true" ? "Sign Out" : "Sign In With Google"}</Button>
         );
     }
 }

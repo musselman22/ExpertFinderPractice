@@ -87,8 +87,8 @@ function UserProfile() {
         return (
             <div className="container mt-4">
                 <div className="row">
-                    <div className="media col-3 justify-content-center">
-                        <img src={userData === "start" ? "" :userData.photoURL} className="align-self-center mr-3" alt=""></img>
+                    <div className="media col-5 justify-content-center"> 
+                        <img style={{border: "3px solid"}} src={userData === "start" ? "" :userData.photoURL} className="align-self-center mr-3" alt=""></img>
                     </div>
                     <div className="col text-center mr-5">
                         <h1>{userData === "start" ? "Sign in to view profile" : userData.displayName}</h1>

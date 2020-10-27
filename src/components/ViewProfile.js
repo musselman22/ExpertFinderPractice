@@ -2,6 +2,9 @@ import React from 'react';
 import { firestore } from '../firebase/firebase';
 import { useDocumentData } from 'react-firebase-hooks/firestore';
 import { useParams } from 'react-router-dom';
+import { auth } from '../firebase/firebase';
+import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
 
 function ViewProfile() {
     let { id } = useParams();
@@ -16,13 +19,27 @@ function ViewProfile() {
 }
 
 function ProfileData(props) {
-    const { displayName, courses, skills, photoURL, email } = props.data;
+    const { displayName, courses, skills, photoURL, email, uid } = props.data;
+    const [loggedIn, setLoggedIn] = useState("start");
+
+
+    if (loggedIn === "start") {
+        auth.onAuthStateChanged(function(user) {
+            if (user) {
+                setLoggedIn("true");
+            } else {
+                setLoggedIn("false");
+            }
+        })
+    }
+    
 
     return (  
         <div className="container mt-4">
         <div className="row">
-            <div className="media col-3 justify-content-center">
-                <img src={photoURL} className="align-self-center mr-3" alt=""></img>
+            <div className="media col-5 justify-content-center">
+                <img src={photoURL} className="align-self-center mr-3" alt="" />
+                {loggedIn === "true" ? <Button className="align-self-end" variant="secondary "href={`/endorse/${uid}`}>Endorse User</Button> : ""}
             </div>
             <div className="col text-center mr-5">
                 <h1>{displayName}</h1>

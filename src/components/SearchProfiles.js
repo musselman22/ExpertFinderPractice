@@ -35,7 +35,7 @@ function ProfileData(props) {
                 <div className="media row-3 justify-content-center">
                     <div>
                     <a href={`view-profile/${uid}`}>
-                        <img src={photoURL} className="align-self-center mr-3" alt="Avatar" />
+                        <img style={{border: "3px solid black"}} src={photoURL} className="align-self-center mr-3" alt="Avatar" />
                     
                         <div className="text-center pr-3">
                             View Profile
