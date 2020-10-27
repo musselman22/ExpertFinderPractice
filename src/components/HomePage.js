@@ -3,8 +3,8 @@ import React from 'react';
 const HomePage = () => {
     return(
         <div className="container">
-        <header className="py-5 bg-image-full" style={{backgroundImage: "url('https://images.unsplash.com/photo-1588064643233-49210b27b82e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3750&q=80')"}}>
-          <img className="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt=""/>
+        <header className="py-5 bg-image-full" style={{backgroundSize: "cover" , backgroundPosition: "center", backgroundImage: "url('https://images.unsplash.com/uploads/141103282695035fa1380/95cdfeef?ixlib=rb-1.2.1&auto=format&fit=crop&w=3074&q=80')"}}>
+          <img className="img-fluid d-block mx-auto" style={{height: "200px", border: "5px solid"}} src="https://images.unsplash.com/photo-1597356686959-09e45535e67b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1511&q=80" alt=""/>
         </header>
   
         <section className="py-5">
@@ -15,7 +15,7 @@ const HomePage = () => {
           </div>
         </section>
   
-        <div className="py-5 bg-image-full" style={{backgroundImage: "url('https://images.unsplash.com/photo-1588064643233-49210b27b82e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3750&q=80')"}}>
+        <div className="py-5 bg-image-full" style={{backgroundSize: "cover", backgroundPosition: "center", backgroundImage: "url('https://images.unsplash.com/photo-1516321165247-4aa89a48be28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1994&q=80')"}}>
           <div style={{height: "200px"}}></div>
         </div>
   

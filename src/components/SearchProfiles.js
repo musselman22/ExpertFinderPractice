@@ -32,10 +32,16 @@ function ProfileData(props) {
     return (  
         <ul className="list-group pt-3">
             <li className="list-group-item">
-            <div className="media row-3 justify-content-center pt-3">
-                <a href={`view-profile/${uid}`}>
-                    <img src={photoURL} className="align-self-center mr-3" alt="" />
-                </a>
+                <div className="media row-3 justify-content-center">
+                    <div>
+                    <a href={`view-profile/${uid}`}>
+                        <img src={photoURL} className="align-self-center mr-3" alt="Avatar" />
+                    
+                        <div className="text-center pr-3">
+                            View Profile
+                        </div>
+                    </a>
+                    </div>
                     <div className="media-body">
                         <h5>{displayName}</h5>
                         <div className="pt-1 pl-2">
