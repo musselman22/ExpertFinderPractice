@@ -26,13 +26,7 @@ const HomePage = () => {
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.</p>
           </div>
         </section>
-  
-        <footer className="py-5 bg-dark" style={{position: "fixed", bottom: "0px", left: "0px", right: "0px"}}>
-          <div className="container">
-            <p className="m-0 text-center text-white">Copyright &copy; Expert Finder 2020</p>
-          </div>
-        </footer>
-      </div>
+        </div>
     );
 }
 
